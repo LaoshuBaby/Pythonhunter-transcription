@@ -36,8 +36,10 @@ curl -s https://pythonhunter.org/feed/audio.xml | grep -oP '<title>\s*<!\[CDATA\
 **使用Whisper转换文本**
 
 ```shell
-whisper ep0.mp3 --language=Chinese --model large --initial_prompt="以下是普通话的句子。"
+whisper ep0.mp3 --language=Chinese --model large-v2 --initial_prompt="以下是普通话的博客。"
 ```
+
+友情提示：ep40及以前的博客是用 `large` 模型进行转写的。如果要尝试 `large-v3` 或其他更新的模型，您可能需要clone官方Git仓库后手动安装，因为PyPi上的包没有更新。
 
 **清理不需要的多格式输出文件**
 
